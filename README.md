@@ -1,4 +1,4 @@
-<img width="200" height="200" align="left" style="float: left; margin: 0 20px 0 0;" alt="Icon" src="https://github.com/tascord/fluid/blob/main/icon.png?raw=true"> 
+<img width="200" height="200" align="left" style="float: left; margin: 0 20px 0 0;" alt="Icon" src="https://github.com/tascord/fluid/blob/main/banner.png?raw=true"> 
 
 <!-- <img width="200" height="200" align="left" style="float: left; margin: 0 20px 0 0;" alt="Icon" src="./banner.png">  -->
 

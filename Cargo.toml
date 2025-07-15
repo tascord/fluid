@@ -6,6 +6,7 @@ exclude = ["src/main.rs"]
 authors = ["Flora Hill"]
 repository = "https://github.com/tascord/fluid"
 license = "MIT"
+description = "Human readable UIDs"
 
 [dependencies]
 bincode = "2.0.1"
