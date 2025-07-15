@@ -15,7 +15,7 @@
 
 ### Usage
 ```rs
-use fluid::Fluid;
+use fl_uid::Fluid;
 
 fn main() {
     // Generate a new Fluid ID
