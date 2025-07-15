@@ -30,8 +30,7 @@ fn main() {
 ```
 
 ### Uniqueness and Clash Probability
-Fluid uses u128 as its internal random seed, providing a vast space of possible inputs. The number of unique combinations generated is the product of the sizes of your filtered word lists.
-
+Fluid uses u128 as its internal random seed, providing a vast space of possible inputs.
 With the dictionary sizes:
 - `ADJ`: 1,075
 - `ADV`: 1,524
@@ -42,4 +41,4 @@ For a total of 1,655,246,575,200 (over 1.6 trillion) unique combinations.
 
 **Practical Uniqueness**: For most applications, generating a few million or even billion IDs, the probability of a random clash is extremely, vanishingly small.
 
-**Theoretical Clashes**: The underlying u128 has far more states (2^128) than your total word combinations. The to_string() implementation uses modulo arithmetic to map parts of the u128 to dictionary indices. This means that theoretically, different u128 values can produce the same string, but the immense number of combinations makes such collisions rare in practice unless you approach the limit of the combination space.
+**Theoretical Clashes**: The underlying u128 has far more states (2^128) than total word combinations. The to_string() implementation uses modulo arithmetic to map parts of the u128 to dictionary indices. This means that theoretically, different u128 values can produce the same string, but the immense number of combinations makes such collisions rare in practice unless you approach the limit of the combination space.
