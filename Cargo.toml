@@ -2,6 +2,10 @@
 name = "fl_uid"
 version = "0.1.0"
 edition = "2024"
+exclude = ["src/main.rs"]
+authors = ["Flora Hill"]
+repository = "https://github.com/tascord/fluid"
+license = "MIT"
 
 [dependencies]
 bincode = "2.0.1"
