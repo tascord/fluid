@@ -24,7 +24,9 @@ impl Dict {
     }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, PartialEq, PartialOrd, Ord, Eq)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[repr(transparent)]
 pub struct Fluid(u128);
 
 impl Fluid {
@@ -140,5 +142,15 @@ mod test {
         println!("Total clashes found: {}", clashes);
 
         assert_eq!(clashes, 0);
+    }
+
+    #[test]
+    #[cfg(feature = "serde")]
+    fn serde() {
+        let uid = Fluid::new();
+        let uid_again: Fluid = serde_json::from_str(&serde_json::ser::to_string(&uid).unwrap()).unwrap();
+
+        println!("{uid} == {uid_again}");
+        assert_eq!(uid, uid_again);
     }
 }
