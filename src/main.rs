@@ -63,13 +63,13 @@ fn main() {
         &mut fs::OpenOptions::new()
             .create(true)
             .write(true)
-            .open("./dict.txt")
+            .open("./dict.bin")
             .unwrap(),
         bincode::config::standard(),
     )
     .expect("Failed to encode dictionary.");
 
-    println!("===== Wrote to ./dict.txt");
+    println!("===== Wrote to ./dict.bin");
     println!("");
 
     

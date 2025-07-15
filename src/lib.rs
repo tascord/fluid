@@ -1,6 +1,6 @@
 use std::cell::LazyCell;
 
-const DICT_FILE: &[u8] = include_bytes!("../dict.txt");
+const DICT_FILE: &[u8] = include_bytes!("../dict.bin");
 const FLUID_DICT: LazyCell<Dict> = LazyCell::new(|| {
     bincode::borrow_decode_from_slice(DICT_FILE, bincode::config::standard())
         .expect("Fluid dictionary file is corrupt.")
